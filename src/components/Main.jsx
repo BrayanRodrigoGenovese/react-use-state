@@ -1,3 +1,4 @@
+import Card from "./card";
 const languages = [
   {
     id: 1,
@@ -40,14 +41,11 @@ export default function Main() {
   return (
     <>
       {languages.map((language) => (
-        <div>
-          <article key={language.id}>
-            <header>
-              <h2>{language.title}</h2>
-            </header>
-            <p>{language.description}</p>
-          </article>
-        </div>
+        <Card
+          id={language.id}
+          title={language.title}
+          description={language.description}
+        />
       ))}
     </>
   );
