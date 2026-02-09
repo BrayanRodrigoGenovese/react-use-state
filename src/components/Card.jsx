@@ -1,11 +1,9 @@
 export default function Card({ id, title, description }) {
   return (
     <>
-      <div>
+      <div className="card">
         <article key={id}>
-          <header>
-            <h2>{title}</h2>
-          </header>
+          <h2>{title}</h2>
           <p>{description}</p>
         </article>
       </div>

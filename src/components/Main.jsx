@@ -40,13 +40,20 @@ const languages = [
 export default function Main() {
   return (
     <>
-      {languages.map((language) => (
-        <Card
-          id={language.id}
-          title={language.title}
-          description={language.description}
-        />
-      ))}
+      <main>
+        <div id="button-row">
+          {languages.map((language) => (
+            <button id={language.id}>{language.title}</button>
+          ))}
+        </div>
+        {languages.map((language) => (
+          <Card
+            id={language.id}
+            title={language.title}
+            description={language.description}
+          />
+        ))}
+      </main>
     </>
   );
 }
