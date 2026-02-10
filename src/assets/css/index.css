@@ -47,10 +47,6 @@ main {
   padding: 35px;
 }
 
-.inactive {
-  display: none;
-}
-
 button {
   display: block;
   padding: 20px;

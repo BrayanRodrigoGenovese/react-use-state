@@ -1,4 +1,5 @@
 import Card from "./card";
+import { useState } from "react";
 const languages = [
   {
     id: 1,
@@ -38,14 +39,17 @@ const languages = [
   },
 ];
 export default function Main() {
+  const [activeIndex, setActiveIndex] = useState(1);
+
   return (
     <>
       <main>
         <div id="button-row">
           {languages.map((language) => (
             <button
-              className={language.id === 1 ? "active" : ""}
+              className={activeIndex === language.id ? "active" : ""}
               id={language.id}
+              onClick={() => setActiveIndex(language.id)}
             >
               {language.title}
             </button>
@@ -56,6 +60,7 @@ export default function Main() {
             id={language.id}
             title={language.title}
             description={language.description}
+            isOpen={activeIndex === language.id}
           />
         ))}
       </main>
