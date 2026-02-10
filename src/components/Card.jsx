@@ -1,8 +1,8 @@
 export default function Card({ id, title, description }) {
   return (
     <>
-      <div className="card">
-        <article key={id}>
+      <div className={"card " + (id !== 1 ? "inactive" : "")}>
+        <article id={id}>
           <h2>{title}</h2>
           <p>{description}</p>
         </article>

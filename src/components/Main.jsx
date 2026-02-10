@@ -43,7 +43,12 @@ export default function Main() {
       <main>
         <div id="button-row">
           {languages.map((language) => (
-            <button id={language.id}>{language.title}</button>
+            <button
+              className={language.id === 1 ? "active" : ""}
+              id={language.id}
+            >
+              {language.title}
+            </button>
           ))}
         </div>
         {languages.map((language) => (

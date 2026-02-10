@@ -47,6 +47,10 @@ main {
   padding: 35px;
 }
 
+.inactive {
+  display: none;
+}
+
 button {
   display: block;
   padding: 20px;
@@ -54,12 +58,19 @@ button {
   border-style: none;
   color: white;
   background-color: rgb(15 110 253);
-  /* yellow rgb(255 193 9) */
   cursor: pointer;
+  font-size: 22pt;
+  font-weight: 400;
 }
+
+button.active {
+  color: black;
+  background-color: rgb(255 193 9);
+}
+
 #button-row {
   display: flex;
   gap: 1rem;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin-top: 80px;
+  margin-bottom: 80px;
 }
